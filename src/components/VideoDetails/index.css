@@ -1,0 +1,100 @@
+.trending-dark {
+  background-color: #0f0f0f;
+  color: #ffffff;
+}
+.trending-light {
+  background-color: #f9f9f9;
+}
+
+.profile-img {
+  width: 30px;
+}
+.interaction-buttons-container {
+  color: #606060;
+  font-size: 15px;
+  display: flex;
+}
+.interaction-button {
+  display: flex;
+  align-items: center;
+  color: #64748b;
+  background-color: transparent;
+  border-style: none;
+  margin-right: 10px;
+}
+.active-interaction-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border-style: none;
+  margin-right: 10px;
+  color: #2563eb;
+}
+.dot {
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.channel-details-container {
+  display: flex;
+  align-items: center;
+}
+.name-subcriber-container {
+  margin-left: 10px;
+}
+.name {
+  font-size: 12px;
+}
+.subscriber-count {
+  font-size: 10px;
+}
+
+@media (max-width: 768px) {
+  .home-sm-container {
+    display: block;
+    width: 100%;
+  }
+
+  .responsive-container {
+    background-size: cover;
+  }
+  .views-publishDate-container {
+    display: flex;
+    font-size: 10px;
+  }
+  .video-detials-container {
+    padding: 10px;
+  }
+
+  .like-icon {
+    margin-right: 5px;
+  }
+  .description {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-sm-container {
+    display: block;
+    width: 100%;
+  }
+
+  .responsive-container {
+    background-size: cover;
+  }
+  .views-publishDate-container {
+    display: flex;
+    font-size: 10px;
+  }
+  .video-detials-container {
+    padding: 10px;
+  }
+
+  .like-icon {
+    margin-right: 5px;
+  }
+  .description {
+    font-size: 10px;
+  }
+}

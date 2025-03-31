@@ -1,0 +1,21 @@
+@media (max-width: 576px) {
+  .video-card {
+    list-style-type: none;
+    width: 40%;
+    margin-right: 10px;
+  }
+  .game-thumbnail {
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .video-card {
+    list-style-type: none;
+    width: 30%;
+    margin-right: 10px;
+  }
+  .game-thumbnail {
+    width: 100%;
+  }
+}

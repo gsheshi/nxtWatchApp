@@ -1,0 +1,50 @@
+@media (min-width: 768px) {
+  .all-categorys-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .category {
+    display: flex;
+    align-items: center;
+  }
+  .link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  .category-icon {
+    font-size: 20px;
+  }
+  .category-name {
+    font-size: 15px;
+    margin-left: 15px;
+  }
+  .contact-heading {
+    font-size: 15px;
+  }
+
+  .contact-website-logo {
+    width: 30px;
+    margin-right: 10px;
+  }
+  .categorys-container-dark {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    color: #ffffff;
+    background-color: #383838;
+    padding: 20px;
+    height: 100%;
+  }
+  .categorys-container-light {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    background-color: #ffffff;
+    padding: 20px;
+    color: #383838;
+    height: 100%;
+  }
+}

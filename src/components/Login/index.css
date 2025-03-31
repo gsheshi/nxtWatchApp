@@ -1,0 +1,75 @@
+.login-bg {
+  height: 100vh;
+  background-color: #e2e8f0;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto';
+}
+.login-button {
+  background-color: #3b82f6;
+  border-width: 0;
+  color: #ffffff;
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.err-msg {
+  color: red;
+}
+.channel-logo-container {
+  text-align: center;
+}
+
+.channel-logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+.label-input-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.label {
+  color: #475569;
+  font-size: 15px;
+  font-weight: bold;
+}
+.input {
+  background-color: transparent;
+  width: 80%;
+  height: 40px;
+  border-style: solid;
+  border-color: #94a3b8;
+  border-width: 1px;
+  padding-left: 20px;
+  font-size: 15px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+.show-password-container {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 576px) {
+  .card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+  }
+}
+
+@media (min-width: 576px) {
+  .card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 500px;
+  }
+}

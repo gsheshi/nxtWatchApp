@@ -1,0 +1,102 @@
+.popup {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  color: #3b82f6;
+}
+
+.navbar {
+  background-color: #0f0f0f;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-light {
+  background-color: #ffffff;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-channel-logo {
+  width: 100px;
+}
+
+@media (max-width: 768px) {
+  .sm-nav {
+    display: flex;
+    margin-right: 20px;
+    list-style-type: none;
+  }
+  .light-icon {
+    color: #ffffff;
+    font-size: 30px;
+  }
+  .light-icon-light {
+    color: black;
+    font-size: 30px;
+  }
+  .light-button {
+    background-color: transparent;
+    border-width: 0;
+    border-style: none;
+    margin-right: 5px;
+  }
+  .lg-nav {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .sm-nav {
+    display: none;
+  }
+
+  .lg-nav {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    list-style-type: none;
+  }
+  .light-button-lg {
+    background-color: transparent;
+    border-width: 0;
+    border-style: none;
+    margin-right: 5px;
+  }
+  .light-icon-lg {
+    color: #ffffff;
+    font-size: 40px;
+  }
+  .light-icon-lg-light {
+    color: black;
+    font-size: 40px;
+  }
+  .profile-img {
+    width: 40px;
+  }
+  .logout-button-lg {
+    background-color: transparent;
+    color: #ffffff;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 1px;
+    border-radius: 5px;
+    width: 80px;
+    height: 30px;
+    margin-left: 5px;
+  }
+  .logout-button-lg-light {
+    background-color: transparent;
+    color: #3b82f6;
+    border-style: solid;
+    border-color: #3b82f6;
+    border-width: 1px;
+    border-radius: 5px;
+    width: 80px;
+    height: 30px;
+    margin-left: 5px;
+  }
+}
