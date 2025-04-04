@@ -70,6 +70,12 @@ class Home extends Component {
     this.setState({userInput: event.target.value})
   }
 
+  onKeyDownInput = event => {
+    if (event.key === 'Enter') {
+      this.getData()
+    }
+  }
+
   onClickSearchButton = () => {
     this.getData()
   }
@@ -152,6 +158,7 @@ class Home extends Component {
                           placeholder="Search"
                           value={userInput}
                           onChange={this.onChangeInput}
+                          onKeyDown={this.onKeyDownInput}
                         />
                       </div>
                       <div className="search-container">
