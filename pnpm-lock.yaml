@@ -19,6 +19,7 @@ dependencies:
   styled-components: 5.3.0_react-dom@17.0.1+react@17.0.1
   surge: 0.23.0
 devDependencies:
+  '@babel/eslint-parser': 7.27.1
   babel-plugin-styled-components: 1.13.2_styled-components@5.3.0
   eslint-config-airbnb: 18.2.1
   eslint-config-prettier: 8.1.0
@@ -78,6 +79,19 @@ packages:
       node: '>=6.9.0'
     resolution:
       integrity: sha512-0qXcZYKZp3/6N2jKYVxZv0aNCsxTSVCiK72DTiTYZAu7sjg73W0/aynWjMbiGd87EQL4WyA8reiJVh92AVla9g==
+  /@babel/eslint-parser/7.27.1:
+    dependencies:
+      '@nicolo-ribaudo/eslint-scope-5-internals': 5.1.1-v1
+      eslint-visitor-keys: 2.1.0
+      semver: 6.3.1
+    dev: true
+    engines:
+      node: ^10.13.0 || ^12.13.0 || >=14.0.0
+    peerDependencies:
+      '@babel/core': ^7.11.0
+      eslint: ^7.5.0 || ^8.0.0 || ^9.0.0
+    resolution:
+      integrity: sha512-q8rjOuadH0V6Zo4XLMkJ3RMQ9MSBqwaDByyYB0izsYdaIWGNLmEblbCOf1vyFHICcg16CD7Fsi51vcQnYxmt6Q==
   /@babel/generator/7.14.8:
     dependencies:
       '@babel/types': 7.14.8
@@ -1936,6 +1950,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-wlLHZgrFPxU5P0HQuUGyl0mQdwo/IFKEe4Pocg4xEj53m9gghsem8YdVzwJYMqxbQv1eMrEHgilvTdc36Vpr/Q==
+  /@nicolo-ribaudo/eslint-scope-5-internals/5.1.1-v1:
+    dependencies:
+      eslint-scope: 5.1.1
+    dev: true
+    resolution:
+      integrity: sha512-54/JRvkLIzzDWshCWfuhadfrfZVPiElY8Fcgmg1HroEly/EDSszzhBAsarCux+D/kOslTRquNzuyGSmUSTTHGg==
   /@nodelib/fs.scandir/2.1.5:
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -11595,6 +11615,11 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
+  /semver/6.3.1:
+    dev: true
+    hasBin: true
+    resolution:
+      integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==
   /semver/7.0.0:
     dev: true
     hasBin: true
@@ -13698,6 +13723,7 @@ packages:
     resolution:
       integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 specifiers:
+  '@babel/eslint-parser': 7.27.1
   '@craco/craco': 6.1.1
   '@testing-library/jest-dom': 5.11.9
   '@testing-library/react': 11.2.5
