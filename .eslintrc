@@ -3,14 +3,19 @@
     "browser": true,
     "es2021": true
   },
-  "parser": "babel/eslint-parser",
+  "parser": "@babel/eslint-parser",
   "extends": [
     "react-app",
     "airbnb",
     "prettier"
   ],
   "parserOptions": {
-    "requireConfigFile": false
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": [
+        "@babel/preset-react"
+      ]
+    }
   },
   "plugins": [
     "prettier"
