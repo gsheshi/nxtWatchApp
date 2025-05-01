@@ -87,11 +87,14 @@ class Trending extends Component {
     </div>
   )
 
-  loaderView = () => (
-    <div className="loader-container" data-testid="loader">
-      <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
-    </div>
-  )
+  loaderView = () => {
+    const dummy = this
+    return (
+      <div className="loader-container" data-testid="loader">
+        <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
+      </div>
+    )
+  }
 
   renderContent = () => {
     const {responseStatus} = this.state

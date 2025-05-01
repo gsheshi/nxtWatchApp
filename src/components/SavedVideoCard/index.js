@@ -33,7 +33,7 @@ const SavedVideoCard = props => {
             <div className="name-view-date-container">
               <p className="name">{name}</p>
               <p className="view">{viewCount} views</p>
-              <p className="date">{publishedAt}</p>
+              <p className="date">{formattedDate}</p>
             </div>
           </div>
         </div>

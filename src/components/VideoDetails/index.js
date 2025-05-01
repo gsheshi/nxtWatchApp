@@ -163,8 +163,13 @@ class VideoDetails extends Component {
 
           const {videoData} = this.state
 
-          const {title, channel, viewCount, publishedAt, description} =
-            videoData
+          const {
+            title,
+            channel,
+            viewCount,
+            publishedAt,
+            description,
+          } = videoData
 
           const {name, profileImageUrl, subscriberCount} = channel
 
@@ -185,7 +190,7 @@ class VideoDetails extends Component {
                     <div className="views-publishDate-container">
                       <p className="view-count">{viewCount} views</p>
                       <p className="dot">.</p>
-                      <p>{publishedAt}</p>
+                      <p>{formattedDate}</p>
                     </div>
                     <div className="interaction-buttons-container">
                       <LikeButton isLiked={isLiked} onClick={this.onClickLike}>
@@ -238,11 +243,14 @@ class VideoDetails extends Component {
     )
   }
 
-  loaderView = () => (
-    <div className="loader-container" data-testid="loader">
-      <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
-    </div>
-  )
+  loaderView = () => {
+    const dummy = this
+    return (
+      <div className="loader-container" data-testid="loader">
+        <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
+      </div>
+    )
+  }
 
   failureView = () => (
     <div className="empty-container">

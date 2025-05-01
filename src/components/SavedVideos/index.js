@@ -19,24 +19,30 @@ class SavedVideos extends Component {
     this.setState({loader: false})
   }
 
-  failureView = () => (
-    <div className="empty-container">
-      <img
-        src="https://assets.ccbp.in/frontend/react-js/nxt-watch-no-saved-videos-img.png"
-        alt="no saved videos"
-        className="empty-image"
-      />
+  failureView = () => {
+    const dummy = this
+    return (
+      <div className="empty-container">
+        <img
+          src="https://assets.ccbp.in/frontend/react-js/nxt-watch-no-saved-videos-img.png"
+          alt="no saved videos"
+          className="empty-image"
+        />
 
-      <h1 className="empty-heading"> No saved videos found</h1>
-      <p>You can save your videos while watching them</p>
-    </div>
-  )
+        <h1 className="empty-heading"> No saved videos found</h1>
+        <p>You can save your videos while watching them</p>
+      </div>
+    )
+  }
 
-  loaderView = () => (
-    <div className="loader-container" data-testid="loader">
-      <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
-    </div>
-  )
+  loaderView = () => {
+    const dummy = this
+    return (
+      <div className="loader-container" data-testid="loader">
+        <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
+      </div>
+    )
+  }
 
   successView = savedList => (
     <div>
