@@ -28,6 +28,7 @@
     "surge": "0.23.0"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "7.27.1",
     "babel-plugin-styled-components": "1.13.2",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-prettier": "8.1.0",
