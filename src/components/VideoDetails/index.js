@@ -159,16 +159,12 @@ class VideoDetails extends Component {
       <ThemeContext.Consumer>
         {value => {
           const {onClickSave, savedVideosList} = value
+          console.log(savedVideosList)
 
           const {videoData} = this.state
 
-          const {
-            title,
-            channel,
-            viewCount,
-            publishedAt,
-            description,
-          } = videoData
+          const {title, channel, viewCount, publishedAt, description} =
+            videoData
 
           const {name, profileImageUrl, subscriberCount} = channel
 
@@ -189,7 +185,7 @@ class VideoDetails extends Component {
                     <div className="views-publishDate-container">
                       <p className="view-count">{viewCount} views</p>
                       <p className="dot">.</p>
-                      <p>{formattedDate}</p>
+                      <p>{publishedAt}</p>
                     </div>
                     <div className="interaction-buttons-container">
                       <LikeButton isLiked={isLiked} onClick={this.onClickLike}>

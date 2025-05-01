@@ -94,7 +94,7 @@ class Home extends Component {
     return (
       <div>
         {videosList.length > 0 ? (
-          <ul className="videos-container">
+          <ul className='videos-container'>
             {videosList.map(video => (
               <VideosCard key={video.id} video={video} />
             ))}
@@ -114,61 +114,61 @@ class Home extends Component {
         {value => {
           const {theme} = value
           return (
-            <HomeTheme data-testid="home" theme={theme}>
+            <HomeTheme data-testid='home' theme={theme}>
               <Navbar />
-              <div className="flex-container">
-                <div className="slider-container">
+              <div className='flex-container'>
+                <div className='slider-container'>
                   <Slidebar />
                 </div>
-                <div className="home-view">
+                <div className='home-view'>
                   {closeDefaultView && (
-                    <Banner data-testid="banner">
-                      <div className="channel-logo-close-btn-container">
+                    <Banner data-testid='banner'>
+                      <div className='channel-logo-close-btn-container'>
                         <img
-                          src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
-                          alt="nxt watch logo"
-                          className="home-channel-logo-sm"
+                          src='https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png'
+                          alt='nxt watch logo'
+                          className='home-channel-logo-sm'
                         />
                         <button
-                          data-testid="close"
-                          type="button"
-                          className="close-banner-button"
+                          data-testid='close'
+                          type='button'
+                          className='close-banner-button'
                           onClick={this.onClickDefaultCloseButton}
                         >
-                          <IoMdClose className="close-button" />
+                          <IoMdClose className='close-button' />
                         </button>
                       </div>
-                      <div className="banner-content">
-                        <p className="description-sm">
+                      <div className='banner-content'>
+                        <p className='description-sm'>
                           Buy Nxt Watch Premium prepaid plans with UPI
                         </p>
-                        <button type="button" className="get-it-button">
+                        <button type='button' className='get-it-button'>
                           GET IT NOW
                         </button>
                       </div>
                     </Banner>
                   )}
 
-                  <div className="videos-data-sm">
-                    <div className="main-search-container">
-                      <div className="input-container">
+                  <div className='videos-data-sm'>
+                    <div className='main-search-container'>
+                      <div className='input-container'>
                         <input
-                          type="search"
-                          className="input"
-                          placeholder="Search"
+                          type='search'
+                          className='input'
+                          placeholder='Search'
                           value={userInput}
                           onChange={this.onChangeInput}
                           onKeyDown={this.onKeyDownInput}
                         />
                       </div>
-                      <div className="search-container">
+                      <div className='search-container'>
                         <button
-                          data-testid="searchButton"
-                          type="button"
-                          className="search-button"
+                          data-testid='searchButton'
+                          type='button'
+                          className='search-button'
                           onClick={this.onClickSearchButton}
                         >
-                          <BsSearch className="search-icon" />
+                          <BsSearch className='search-icon' />
                         </button>
                       </div>
                     </div>
@@ -184,17 +184,17 @@ class Home extends Component {
   }
 
   noItemsFound = () => (
-    <div className="empty-container">
+    <div className='empty-container'>
       <img
-        src="https://assets.ccbp.in/frontend/react-js/nxt-watch-no-search-results-img.png"
-        alt="no videos"
-        className="empty-image"
+        src='https://assets.ccbp.in/frontend/react-js/nxt-watch-no-search-results-img.png'
+        alt='no videos'
+        className='empty-image'
       />
-      <h1 className="empty-heading">No Search results found</h1>
+      <h1 className='empty-heading'>No Search results found</h1>
       <p>Try different key words or remove search filter</p>
       <button
-        type="button"
-        className="retry-button"
+        type='button'
+        className='retry-button'
         onClick={this.onClickRetryButton}
       >
         Retry
@@ -203,20 +203,20 @@ class Home extends Component {
   )
 
   failureView = () => (
-    <div className="empty-container">
+    <div className='empty-container'>
       <img
-        src="https://assets.ccbp.in/frontend/react-js/nxt-watch-failure-view-light-theme-img.png"
-        alt="failure view"
-        className="empty-image"
+        src='https://assets.ccbp.in/frontend/react-js/nxt-watch-failure-view-light-theme-img.png'
+        alt='failure view'
+        className='empty-image'
       />
 
-      <h1 className="empty-heading"> Oops! Something Went Wrong</h1>
+      <h1 className='empty-heading'> Oops! Something Went Wrong</h1>
       <p>
         We are having some trouble to complete your request. Please try again.
       </p>
       <button
-        type="button"
-        className="retry-button"
+        type='button'
+        className='retry-button'
         onClick={this.onClickRetryButton}
       >
         Retry
@@ -225,8 +225,8 @@ class Home extends Component {
   )
 
   loaderView = () => (
-    <div className="loader-container" data-testid="loader">
-      <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
+    <div className='loader-container' data-testid='loader'>
+      <Loader type='ThreeDots' color='#ffffff' height='50' width='50' />
     </div>
   )
 
