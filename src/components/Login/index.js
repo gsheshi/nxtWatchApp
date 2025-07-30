@@ -73,59 +73,59 @@ class Login extends Component {
     console.log(isChecked)
     const jwtToken = Cookies.get('jwt_token')
     if (jwtToken !== undefined) {
-      return <Redirect to='/' />
+      return <Redirect to="/" />
     }
 
     return (
-      <form className='login-bg' onSubmit={this.onSubmitForm}>
-        <div className='card'>
-          <div className='channel-logo-container'>
+      <form className="login-bg" onSubmit={this.onSubmitForm}>
+        <div className="card">
+          <div className="channel-logo-container">
             <img
-              src='https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png'
-              alt='website logo'
-              className='channel-logo'
+              src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
+              alt="website logo"
+              className="channel-logo"
             />
           </div>
 
-          <div className='label-input-container'>
-            <label htmlFor='inbox-1' className='label'>
+          <div className="label-input-container">
+            <label htmlFor="inbox-1" className="label">
               USERNAME
             </label>
             <input
-              type='text'
-              id='inbox-1'
-              className='input'
-              placeholder='Username'
+              type="text"
+              id="inbox-1"
+              className="input"
+              placeholder="Username"
               onChange={this.onChangeUsername}
               value={username}
             />
           </div>
-          <div className='label-input-container'>
-            <label htmlFor='inbox-2' className='label'>
+          <div className="label-input-container">
+            <label htmlFor="inbox-2" className="label">
               PASSWORD
             </label>
             <input
               type={isChecked ? 'text' : 'password'}
-              id='inbox-2'
-              className='input'
-              placeholder='Password'
+              id="inbox-2"
+              className="input"
+              placeholder="Password"
               onChange={this.onChangePssword}
               value={password}
             />
           </div>
 
-          <div className='show-password-container'>
+          <div className="show-password-container">
             <input
-              type='checkbox'
-              id='checkbox'
+              type="checkbox"
+              id="checkbox"
               onChange={this.onChangeCheckbox}
               checked={isChecked}
             />
-            <label htmlFor='checkbox'>Show Password</label>
+            <label htmlFor="checkbox">Show Password</label>
           </div>
-          <LoginButton type='submit'>Login</LoginButton>
+          <LoginButton type="submit">Login</LoginButton>
 
-          {submissionStatus && <p className='err-msg'>*{errorMsg}</p>}
+          {submissionStatus && <p className="err-msg">*{errorMsg}</p>}
         </div>
       </form>
     )

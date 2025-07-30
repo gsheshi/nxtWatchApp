@@ -1,16 +1,23 @@
 import React from 'react'
 
-const ThemeContext = React.createContext()
+const Context = React.createContext()
 
-class ThemeProvider extends React.Component {
+class ContextProvider extends React.Component {
   state = {
     isDarkTheme: false,
     savedVideosList: [],
+    isSidebarOpen: false,
   }
 
   toggleTheme = () => {
     this.setState(prevState => ({
       isDarkTheme: !prevState.isDarkTheme,
+    }))
+  }
+
+  toggleSidebar = () => {
+    this.setState(prev => ({
+      isSidebarOpen: !prev.isSidebarOpen,
     }))
   }
 
@@ -29,24 +36,26 @@ class ThemeProvider extends React.Component {
   }
 
   render() {
-    const {isDarkTheme, savedVideosList} = this.state
+    const {isDarkTheme, savedVideosList, isSidebarOpen} = this.state
     const {children} = this.props
 
     return (
-      <ThemeContext.Provider
+      <Context.Provider
         value={{
           theme: isDarkTheme,
           savedVideosList,
+          isSidebarOpen: isSidebarOpen,
           onChangeTheme: this.toggleTheme,
           onClickSave: this.onClickSave,
+          onChangeSidebar: this.toggleSidebar,
         }}
       >
         {children}
-      </ThemeContext.Provider>
+      </Context.Provider>
     )
   }
 }
 
-export {ThemeProvider}
+export {ContextProvider}
 
-export default ThemeContext
+export default Context

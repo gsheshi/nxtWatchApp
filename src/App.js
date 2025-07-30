@@ -10,15 +10,21 @@ import Gaming from './components/Gaming'
 import SavedVideos from './components/SavedVideos'
 import NotFound from './components/NotFound'
 
-import {ThemeProvider} from './context/ThemeContext'
+import {ContextProvider} from './context/Context'
 
 import './App.css'
 
 // Replace your code here
 class App extends Component {
+  state = {isSidebarOpen: false}
+
+  toggleSidebar = () => {
+    this.setState(prev => ({isSidebarOpen: !prev.isSidebarOpen}))
+  }
+
   render() {
     return (
-      <ThemeProvider>
+      <ContextProvider>
         <Switch>
           <Route exact path="/login" component={Login} />
           <ProtectedRoute exact path="/" component={Home} />
@@ -29,7 +35,7 @@ class App extends Component {
           <Route path="/not-found" component={NotFound} />
           <Redirect to="/not-found" />
         </Switch>
-      </ThemeProvider>
+      </ContextProvider>
     )
   }
 }

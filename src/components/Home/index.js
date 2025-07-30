@@ -13,7 +13,7 @@ import Navbar from '../Navbar'
 import VideosCard from '../HomeVideosCard'
 import Slidebar from '../Slidebar'
 
-import ThemeContext from '../../context/ThemeContext'
+import Context from '../../context/Context'
 
 import './index.css'
 
@@ -110,16 +110,20 @@ class Home extends Component {
     const {userInput, closeDefaultView} = this.state
 
     return (
-      <ThemeContext.Consumer>
+      <Context.Consumer>
         {value => {
-          const {theme} = value
+          const {theme, isSidebarOpen} = value
+          const sidebarClassName = isSidebarOpen
+            ? 'slider-container show'
+            : 'slider-container'
           return (
             <HomeTheme data-testid="home" theme={theme}>
               <Navbar />
               <div className="flex-container">
-                <div className="slider-container">
+                <div className={sidebarClassName}>
                   <Slidebar />
                 </div>
+
                 <div className="home-view">
                   {closeDefaultView && (
                     <Banner data-testid="banner">
@@ -179,7 +183,7 @@ class Home extends Component {
             </HomeTheme>
           )
         }}
-      </ThemeContext.Consumer>
+      </Context.Consumer>
     )
   }
 

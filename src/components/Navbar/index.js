@@ -8,7 +8,7 @@ import {BsBrightnessHigh, BsList, BsBoxArrowRight} from 'react-icons/bs'
 
 import {IoMoon} from 'react-icons/io5'
 
-import ThemeContext from '../../context/ThemeContext'
+import Context from '../../context/Context'
 
 import './index.css'
 
@@ -20,9 +20,9 @@ const Navbar = props => {
   }
 
   return (
-    <ThemeContext.Consumer>
+    <Context.Consumer>
       {value => {
-        const {theme, onChangeTheme} = value
+        const {theme, onChangeTheme, onChangeSidebar} = value
 
         return (
           <div>
@@ -55,7 +55,11 @@ const Navbar = props => {
                   </button>
                 </li>
                 <li>
-                  <button type="button" className="light-button">
+                  <button
+                    type="button"
+                    className="light-button"
+                    onClick={onChangeSidebar}
+                  >
                     <BsList
                       className={theme ? 'light-icon' : 'light-icon-light'}
                     />
@@ -150,7 +154,7 @@ const Navbar = props => {
           </div>
         )
       }}
-    </ThemeContext.Consumer>
+    </Context.Consumer>
   )
 }
 

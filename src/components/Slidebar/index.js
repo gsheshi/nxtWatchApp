@@ -5,12 +5,12 @@ import {FaFire} from 'react-icons/fa'
 import {SiYoutubegaming} from 'react-icons/si'
 import {BiListPlus} from 'react-icons/bi'
 
-import ThemeContext from '../../context/ThemeContext'
+import Context from '../../context/Context'
 
 import './index.css'
 
 const Sildebar = () => (
-  <ThemeContext.Consumer>
+  <Context.Consumer>
     {value => {
       const {theme} = value
 
@@ -70,7 +70,7 @@ const Sildebar = () => (
         </div>
       )
     }}
-  </ThemeContext.Consumer>
+  </Context.Consumer>
 )
 
 export default Sildebar

@@ -10,7 +10,7 @@ import Navbar from '../Navbar'
 import TrendingVideoCard from '../TrendingVideosCard'
 import Slidebar from '../Slidebar'
 
-import ThemeContext from '../../context/ThemeContext'
+import Context from '../../context/Context'
 
 import './index.css'
 
@@ -124,7 +124,7 @@ class Trending extends Component {
 
   render() {
     return (
-      <ThemeContext.Consumer>
+      <Context.Consumer>
         {value => {
           const {theme} = value
           return (
@@ -165,7 +165,7 @@ class Trending extends Component {
             </div>
           )
         }}
-      </ThemeContext.Consumer>
+      </Context.Consumer>
     )
   }
 }

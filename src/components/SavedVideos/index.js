@@ -8,7 +8,7 @@ import Navbar from '../Navbar'
 import SavedVideoCard from '../SavedVideoCard'
 import Slidebar from '../Slidebar'
 
-import ThemeContext from '../../context/ThemeContext'
+import Context from '../../context/Context'
 
 import './index.css'
 
@@ -20,7 +20,6 @@ class SavedVideos extends Component {
   }
 
   failureView = () => {
-    const dummy = this
     return (
       <div className="empty-container">
         <img
@@ -36,7 +35,6 @@ class SavedVideos extends Component {
   }
 
   loaderView = () => {
-    const dummy = this
     return (
       <div className="loader-container" data-testid="loader">
         <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
@@ -62,7 +60,7 @@ class SavedVideos extends Component {
     const {loader} = this.state
     //  console.log(savedList)
     return (
-      <ThemeContext.Consumer>
+      <Context.Consumer>
         {value => {
           const {theme, savedVideosList} = value
           return (
@@ -107,7 +105,7 @@ class SavedVideos extends Component {
             </div>
           )
         }}
-      </ThemeContext.Consumer>
+      </Context.Consumer>
     )
   }
 }

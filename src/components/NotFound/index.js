@@ -2,12 +2,12 @@ import Navbar from '../Navbar'
 
 import Slidebar from '../Slidebar'
 
-import ThemeContext from '../../context/ThemeContext'
+import Context from '../../context/Context'
 
 import './index.css'
 
 const NotFound = () => (
-  <ThemeContext.Consumer>
+  <Context.Consumer>
     {value => {
       const {theme} = value
       return (
@@ -32,7 +32,7 @@ const NotFound = () => (
         </div>
       )
     }}
-  </ThemeContext.Consumer>
+  </Context.Consumer>
 )
 
 export default NotFound

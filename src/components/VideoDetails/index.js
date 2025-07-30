@@ -14,7 +14,7 @@ import {LikeButton, DislikeButton} from './styledComponents'
 
 import Navbar from '../Navbar'
 import Slidebar from '../Slidebar'
-import ThemeContext from '../../context/ThemeContext'
+import Context from '../../context/Context'
 
 import './index.css'
 
@@ -156,20 +156,15 @@ class VideoDetails extends Component {
     //  console.log(isLiked)
 
     return (
-      <ThemeContext.Consumer>
+      <Context.Consumer>
         {value => {
           const {onClickSave, savedVideosList} = value
           console.log(savedVideosList)
 
           const {videoData} = this.state
 
-          const {
-            title,
-            channel,
-            viewCount,
-            publishedAt,
-            description,
-          } = videoData
+          const {title, channel, viewCount, publishedAt, description} =
+            videoData
 
           const {name, profileImageUrl, subscriberCount} = channel
 
@@ -239,12 +234,11 @@ class VideoDetails extends Component {
             </div>
           )
         }}
-      </ThemeContext.Consumer>
+      </Context.Consumer>
     )
   }
 
   loaderView = () => {
-    const dummy = this
     return (
       <div className="loader-container" data-testid="loader">
         <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
@@ -289,7 +283,7 @@ class VideoDetails extends Component {
   }
 
   displayVideoData = () => (
-    <ThemeContext.Consumer>
+    <Context.Consumer>
       {value => {
         const {theme} = value
 
@@ -302,7 +296,7 @@ class VideoDetails extends Component {
           </div>
         )
       }}
-    </ThemeContext.Consumer>
+    </Context.Consumer>
   )
 
   render() {

@@ -9,7 +9,7 @@ import Navbar from '../Navbar'
 import GamingVideoCard from '../GamingVideoCard'
 import Slidebar from '../Slidebar'
 
-import ThemeContext from '../../context/ThemeContext'
+import Context from '../../context/Context'
 
 import './index.css'
 
@@ -122,7 +122,7 @@ class Gaming extends Component {
 
   render() {
     return (
-      <ThemeContext.Consumer>
+      <Context.Consumer>
         {value => {
           const {theme} = value
           return (
@@ -161,7 +161,7 @@ class Gaming extends Component {
             </div>
           )
         }}
-      </ThemeContext.Consumer>
+      </Context.Consumer>
     )
   }
 }
