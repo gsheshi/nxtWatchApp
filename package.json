@@ -12,6 +12,7 @@
     "@testing-library/jest-dom": "5.11.9",
     "@testing-library/react": "11.2.5",
     "@testing-library/user-event": "12.6.2",
+    "ajv": "8.17.1",
     "chalk": "4.1.0",
     "date-fns": "2.23.0",
     "history": "5.0.1",
